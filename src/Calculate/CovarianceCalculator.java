@@ -1,28 +1,27 @@
-package calculations;
+package Calculate;
 
 import org.apache.commons.math3.stat.correlation.Covariance;
 import java.util.ArrayList;
 import java.util.List;
-
-public class CovarianceCalculator implements Calculator<List<Double[]>, List<List<Double>>> {
-    private List<Double[]> result = new ArrayList<>();
+import java.util.Arrays;
+public class CovarianceCalculator implements Calculator<List<List<Double>>, List<List<Double>>> {
+    private List<List<Double>> result;
 
     @Override
     public void calculate(List<List<Double>> columns) {
-        result.clear();
+        result = new ArrayList<>();
         Covariance covariance = new Covariance();
-        for (int i = 0; i < columns.size(); i++) {
-            for (int j = i + 1; j < columns.size(); j++) {
-                double[] array1 = columns.get(i).stream().mapToDouble(Double::doubleValue).toArray();
-                double[] array2 = columns.get(j).stream().mapToDouble(Double::doubleValue).toArray();
-                double cov = covariance.covariance(array1, array2);
-                result.add(new Double[]{(double) i, (double) j, cov});
+        for (List<Double> innerList1 : columns) {
+            List<Double> row = new ArrayList<>();
+            for (List<Double> innerList2 : columns) {
+                row.add(covariance.covariance(innerList1.stream().mapToDouble(Double::doubleValue).toArray(), innerList2.stream().mapToDouble(Double::doubleValue).toArray()));
             }
+            result.add(row);
         }
     }
 
     @Override
-    public List<Double[]> getResult() {
+    public List<List<Double>> getResult() {
         return result;
     }
 

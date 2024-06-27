@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Laba3" target="20" />
+      <module name="Laba3" target="19" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,10 +1,8 @@
-package calculations;
+package Calculate;
 
-import calculatestatistics.*;
-import ReadExcel;
-import write.ExcelWriter;
+import ExcelTools.ReadExcel;
+import ExcelTools.WriteExcel;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -12,27 +10,27 @@ import java.util.List;
 import java.util.Map;
 
 public class TableCalculator {
-    private Map<String, statystics> statObjects = new HashMap<>();
+    private Map<String, Calculator> statObjects = new HashMap<>();
     private Map<String, List<?>> allResults = new HashMap<>();
     private List<List<Double>> columns;
     private  List<String>labels;
 
-    public Calculator() {
-        statObjects.put("Стандартное отклонение", new StandardDeviation());
-        statObjects.put("Доверительный интервал для мат ожидания", new ConfidenceInterval());
-        statObjects.put("Количество элементов", new QuantityElem());
-        statObjects.put("Среднее значение", new Mean());
-        statObjects.put("Максимальное значение", new Maximum());
-        statObjects.put("Минимальное значение", new Minimum());
-        statObjects.put("Среднее геометрическое", new GeometricMean());
-        statObjects.put("Коэффициент вариации", new CoefficientVariation());
-        statObjects.put("Дисперсия", new Variance());
-        statObjects.put("Размах", new Range());
-        statObjects.put("Ковариация", new Covariation());
+    public TableCalculator() {
+        statObjects.put("Стандартное отклонение", new StandardDeviationCalculator());
+        statObjects.put("Доверительный интервал для мат ожидания", new ConfidenceIntervalCalculator());
+        statObjects.put("Количество элементов", new SampleSizeCalculator());
+        statObjects.put("Среднее значение", new ArithmeticMeanCalculator());
+        statObjects.put("Максимальное значение", new MaxCalculator());
+        statObjects.put("Минимальное значение", new MinCalculator());
+        statObjects.put("Среднее геометрическое", new GeometricMeanCalculator());
+        statObjects.put("Коэффициент вариации", new CoefficientOfVariationCalculator());
+        statObjects.put("Дисперсия", new VarianceCalculator());
+        statObjects.put("Размах", new RangeCalculator());
+        statObjects.put("Ковариация", new CovarianceCalculator());
     }
 
     public void read(String file, String name) throws IOException {
-        ExcelReader excelReader = new ExcelReader();
+        ReadExcel excelReader = new ReadExcel();
         Map<String, List<Double>> data  = excelReader.readFromExcel(file, name);
         labels = new ArrayList<>(data.keySet());
         columns = new ArrayList<>(data.values());
@@ -41,12 +39,12 @@ public class TableCalculator {
 
 
     public void calculateAll() {
-        for (Map.Entry<String, statystics> entry : statObjects.entrySet()) {
+        for (Map.Entry<String, Calculator> entry : statObjects.entrySet()) {
             String name = entry.getKey();
-            statystics calc = entry.getValue();
+            Calculator<?, List<List<Double>>> calc = entry.getValue();
             try {
                 calc.calculate(columns);
-                allResults.put(name, calc.getResult());
+                allResults.put(name, (List<?>) calc.getResult());
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -60,7 +58,7 @@ public class TableCalculator {
     }
 
     public void write() throws IOException{
-        ExcelWriter.write(allResults, labels, "OutputStatistics");
+        WriteExcel.write(allResults, labels, "OutputStatistics");
 
 
 

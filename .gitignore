@@ -1,7 +1,12 @@
 ### IntelliJ IDEA ###
-out/
-!**/src/main/**/out/
-!**/src/test/**/out/
+.idea/
+.idea/modules.xml
+.idea/jarRepositories.xml
+.idea/compiler.xml
+.idea/libraries/
+*.iws
+*.iml
+*.ipr
 
 ### Eclipse ###
 .apt_generated
@@ -27,3 +32,9 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+
+/.idea/
+/META-INF/
+/target/
+/out/

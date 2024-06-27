@@ -1,14 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Laba3:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="2946a27f-0ed6-420c-8a95-5c947077297b" name="Changes" comment="" />
+    <list default="true" id="2946a27f-0ed6-420c-8a95-5c947077297b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laba3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Laba3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Calculate/ArithmeticMeanCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculate/ArithmeticMeanCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Calculate/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculate/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Calculate/CoefficientOfVariationCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculate/CoefficientOfVariationCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Calculate/ConfidenceIntervalCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculate/ConfidenceIntervalCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Calculate/CovarianceCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculate/CovarianceCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Calculate/GeometricMeanCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculate/GeometricMeanCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Calculate/MaxCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculate/MaxCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Calculate/MinCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculate/MinCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Calculate/RangeCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculate/RangeCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Calculate/SampleSizeCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculate/SampleSizeCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Calculate/StandardDeviationCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculate/StandardDeviationCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Calculate/TableCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculate/TableCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Calculate/VarianceCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculate/VarianceCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ExcelTools/ReadExcel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ExcelTools/ReadExcel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ExcelTools/WriteExcel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ExcelTools/WriteExcel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SpreadsheetCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpreadsheetCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StatExcelApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StatExcelApp.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Tag Library Descriptor" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectId" id="2gMVEhTPq6stLV57COu5gfxR0uz" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -20,7 +72,17 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.general",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -32,7 +94,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715507327317</updated>
+      <workItem from="1715507328678" duration="5954000" />
+      <workItem from="1717086726591" duration="3360000" />
+      <workItem from="1717187231462" duration="893000" />
+      <workItem from="1719254311132" duration="1361000" />
+      <workItem from="1719260516047" duration="13157000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.apache.commons.math3.exception.MathIllegalArgumentException" package="org.apache.commons.math3.exception" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,4 +1,4 @@
-package calculations;
+package Calculate;
 
 import org.apache.commons.math3.stat.descriptive.moment.StandardDeviation;
 import java.util.ArrayList;

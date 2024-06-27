@@ -1,12 +1,12 @@
-package calculations;
+package Calculate;
 
 import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ConfidenceIntervalCalculator implements Calculator<List<double[]>, List<List<Double>>> {
-    private List<double[]> result = new ArrayList<>();
+public class ConfidenceIntervalCalculator implements Calculator<List<String>, List<List<Double>>> {
+    private List<String> result = new ArrayList<>();
     private final double confidenceLevel = 1.96; // 95% confidence level
 
     @Override
@@ -20,21 +20,17 @@ public class ConfidenceIntervalCalculator implements Calculator<List<double[]>, 
             double mean = stats.getMean();
             double stdDev = stats.getStandardDeviation();
             double marginOfError = confidenceLevel * stdDev / Math.sqrt(column.size());
-            result.add(new double[]{mean - marginOfError, mean + marginOfError});
+            String interval = "[" + (mean - marginOfError) + "; " + (mean + marginOfError) + "]";
+            result.add(interval);
         }
     }
 
     @Override
-    public List<double[]> getResult() {
+    public List<String> getResult(){
         return result;
     }
-
     @Override
     public String getStringResult() {
-        StringBuilder sb = new StringBuilder();
-        for (double[] interval : result) {
-            sb.append("[").append(interval[0]).append(", ").append(interval[1]).append("], ");
-        }
-        return sb.length() > 2 ? sb.substring(0, sb.length() - 2) : sb.toString();
+        return result.toString();
     }
 }
