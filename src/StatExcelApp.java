@@ -1,5 +1,6 @@
 import Calculate.TableCalculator;
 import ExcelTools.ReadExcel;
+import org.apache.poi.ooxml.POIXMLException;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -70,10 +71,15 @@ public class StatExcelApp extends JFrame {
         int returnValue = fileChooser.showOpenDialog(null);
         if (returnValue == JFileChooser.APPROVE_OPTION) {
             selectedFile = fileChooser.getSelectedFile();
+            if (! selectedFile.getName().endsWith("xlsx")){
+                JOptionPane.showMessageDialog(this, "File format is invalid", "Invalid file format", JOptionPane.INFORMATION_MESSAGE);
+                returnValue = fileChooser.showOpenDialog(null);
+            }
             List<String> names = null;
             try {
                 names = ReadExcel.getSheetNames(selectedFile.getAbsolutePath());
             } catch (IOException ex) {
+                JOptionPane.showMessageDialog(this, "File format is invalid", "Invalid file format", JOptionPane.INFORMATION_MESSAGE);
                 throw new RuntimeException(ex);
             }
             for (String name : names) sheetNames.addItem(name);
